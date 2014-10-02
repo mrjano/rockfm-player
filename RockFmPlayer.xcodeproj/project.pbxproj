@@ -1,0 +1,413 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A53A78619DDE4CE00380AE3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A53A78519DDE4CE00380AE3 /* main.m */; };
+		3A53A78919DDE4CE00380AE3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A53A78819DDE4CE00380AE3 /* AppDelegate.m */; };
+		3A53A78B19DDE4CE00380AE3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A53A78A19DDE4CE00380AE3 /* Images.xcassets */; };
+		3A53A78E19DDE4CE00380AE3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A53A78C19DDE4CE00380AE3 /* MainMenu.xib */; };
+		3A53A79A19DDE4CE00380AE3 /* RockFmPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A53A79919DDE4CE00380AE3 /* RockFmPlayerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A53A79419DDE4CE00380AE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A53A77819DDE4CE00380AE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A53A77F19DDE4CE00380AE3;
+			remoteInfo = RockFmPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3A53A78019DDE4CE00380AE3 /* RockFmPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockFmPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A53A78419DDE4CE00380AE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A53A78519DDE4CE00380AE3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3A53A78719DDE4CE00380AE3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3A53A78819DDE4CE00380AE3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3A53A78A19DDE4CE00380AE3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3A53A78D19DDE4CE00380AE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3A53A79319DDE4CE00380AE3 /* RockFmPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RockFmPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A53A79819DDE4CE00380AE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A53A79919DDE4CE00380AE3 /* RockFmPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RockFmPlayerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A53A77D19DDE4CE00380AE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A53A79019DDE4CE00380AE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A53A77719DDE4CE00380AE3 = {
+			isa = PBXGroup;
+			children = (
+				3A53A78219DDE4CE00380AE3 /* RockFmPlayer */,
+				3A53A79619DDE4CE00380AE3 /* RockFmPlayerTests */,
+				3A53A78119DDE4CE00380AE3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3A53A78119DDE4CE00380AE3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A53A78019DDE4CE00380AE3 /* RockFmPlayer.app */,
+				3A53A79319DDE4CE00380AE3 /* RockFmPlayerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A53A78219DDE4CE00380AE3 /* RockFmPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				3A53A78719DDE4CE00380AE3 /* AppDelegate.h */,
+				3A53A78819DDE4CE00380AE3 /* AppDelegate.m */,
+				3A53A78A19DDE4CE00380AE3 /* Images.xcassets */,
+				3A53A78C19DDE4CE00380AE3 /* MainMenu.xib */,
+				3A53A78319DDE4CE00380AE3 /* Supporting Files */,
+			);
+			path = RockFmPlayer;
+			sourceTree = "<group>";
+		};
+		3A53A78319DDE4CE00380AE3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A53A78419DDE4CE00380AE3 /* Info.plist */,
+				3A53A78519DDE4CE00380AE3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3A53A79619DDE4CE00380AE3 /* RockFmPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				3A53A79919DDE4CE00380AE3 /* RockFmPlayerTests.m */,
+				3A53A79719DDE4CE00380AE3 /* Supporting Files */,
+			);
+			path = RockFmPlayerTests;
+			sourceTree = "<group>";
+		};
+		3A53A79719DDE4CE00380AE3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A53A79819DDE4CE00380AE3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A53A77F19DDE4CE00380AE3 /* RockFmPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A53A79D19DDE4CE00380AE3 /* Build configuration list for PBXNativeTarget "RockFmPlayer" */;
+			buildPhases = (
+				3A53A77C19DDE4CE00380AE3 /* Sources */,
+				3A53A77D19DDE4CE00380AE3 /* Frameworks */,
+				3A53A77E19DDE4CE00380AE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RockFmPlayer;
+			productName = RockFmPlayer;
+			productReference = 3A53A78019DDE4CE00380AE3 /* RockFmPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3A53A79219DDE4CE00380AE3 /* RockFmPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A53A7A019DDE4CE00380AE3 /* Build configuration list for PBXNativeTarget "RockFmPlayerTests" */;
+			buildPhases = (
+				3A53A78F19DDE4CE00380AE3 /* Sources */,
+				3A53A79019DDE4CE00380AE3 /* Frameworks */,
+				3A53A79119DDE4CE00380AE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A53A79519DDE4CE00380AE3 /* PBXTargetDependency */,
+			);
+			name = RockFmPlayerTests;
+			productName = RockFmPlayerTests;
+			productReference = 3A53A79319DDE4CE00380AE3 /* RockFmPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A53A77819DDE4CE00380AE3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = RotR;
+				TargetAttributes = {
+					3A53A77F19DDE4CE00380AE3 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					3A53A79219DDE4CE00380AE3 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 3A53A77F19DDE4CE00380AE3;
+					};
+				};
+			};
+			buildConfigurationList = 3A53A77B19DDE4CE00380AE3 /* Build configuration list for PBXProject "RockFmPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3A53A77719DDE4CE00380AE3;
+			productRefGroup = 3A53A78119DDE4CE00380AE3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A53A77F19DDE4CE00380AE3 /* RockFmPlayer */,
+				3A53A79219DDE4CE00380AE3 /* RockFmPlayerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A53A77E19DDE4CE00380AE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A53A78B19DDE4CE00380AE3 /* Images.xcassets in Resources */,
+				3A53A78E19DDE4CE00380AE3 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A53A79119DDE4CE00380AE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A53A77C19DDE4CE00380AE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A53A78919DDE4CE00380AE3 /* AppDelegate.m in Sources */,
+				3A53A78619DDE4CE00380AE3 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A53A78F19DDE4CE00380AE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A53A79A19DDE4CE00380AE3 /* RockFmPlayerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A53A79519DDE4CE00380AE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A53A77F19DDE4CE00380AE3 /* RockFmPlayer */;
+			targetProxy = 3A53A79419DDE4CE00380AE3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3A53A78C19DDE4CE00380AE3 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A53A78D19DDE4CE00380AE3 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3A53A79B19DDE4CE00380AE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3A53A79C19DDE4CE00380AE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3A53A79E19DDE4CE00380AE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = RockFmPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3A53A79F19DDE4CE00380AE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = RockFmPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3A53A7A119DDE4CE00380AE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RockFmPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RockFmPlayer.app/Contents/MacOS/RockFmPlayer";
+			};
+			name = Debug;
+		};
+		3A53A7A219DDE4CE00380AE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RockFmPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RockFmPlayer.app/Contents/MacOS/RockFmPlayer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A53A77B19DDE4CE00380AE3 /* Build configuration list for PBXProject "RockFmPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A53A79B19DDE4CE00380AE3 /* Debug */,
+				3A53A79C19DDE4CE00380AE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A53A79D19DDE4CE00380AE3 /* Build configuration list for PBXNativeTarget "RockFmPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A53A79E19DDE4CE00380AE3 /* Debug */,
+				3A53A79F19DDE4CE00380AE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3A53A7A019DDE4CE00380AE3 /* Build configuration list for PBXNativeTarget "RockFmPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A53A7A119DDE4CE00380AE3 /* Debug */,
+				3A53A7A219DDE4CE00380AE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A53A77819DDE4CE00380AE3 /* Project object */;
+}
