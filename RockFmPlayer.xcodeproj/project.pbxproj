@@ -10,8 +10,12 @@
 		3A53A78619DDE4CE00380AE3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A53A78519DDE4CE00380AE3 /* main.m */; };
 		3A53A78919DDE4CE00380AE3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A53A78819DDE4CE00380AE3 /* AppDelegate.m */; };
 		3A53A78B19DDE4CE00380AE3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A53A78A19DDE4CE00380AE3 /* Images.xcassets */; };
-		3A53A78E19DDE4CE00380AE3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A53A78C19DDE4CE00380AE3 /* MainMenu.xib */; };
 		3A53A79A19DDE4CE00380AE3 /* RockFmPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A53A79919DDE4CE00380AE3 /* RockFmPlayerTests.m */; };
+		3ADCCBAF19DDF814007E7708 /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADCCBAE19DDF814007E7708 /* AudioStreamer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3ADCCBB819DDF974007E7708 /* RockFMWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADCCBB619DDF974007E7708 /* RockFMWindowController.m */; };
+		3ADCCBB919DDF974007E7708 /* RockFMWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ADCCBB719DDF974007E7708 /* RockFMWindowController.xib */; };
+		3ADCCBC219DEDA0C007E7708 /* btn_play.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ADCCBC019DEDA0C007E7708 /* btn_play.png */; };
+		3ADCCBC319DEDA0C007E7708 /* btn_stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ADCCBC119DEDA0C007E7708 /* btn_stop.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,10 +35,16 @@
 		3A53A78719DDE4CE00380AE3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3A53A78819DDE4CE00380AE3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3A53A78A19DDE4CE00380AE3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		3A53A78D19DDE4CE00380AE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		3A53A79319DDE4CE00380AE3 /* RockFmPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RockFmPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A53A79819DDE4CE00380AE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A53A79919DDE4CE00380AE3 /* RockFmPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RockFmPlayerTests.m; sourceTree = "<group>"; };
+		3ADCCBAD19DDF814007E7708 /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioStreamer.h; sourceTree = "<group>"; };
+		3ADCCBAE19DDF814007E7708 /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioStreamer.m; sourceTree = "<group>"; };
+		3ADCCBB519DDF974007E7708 /* RockFMWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RockFMWindowController.h; sourceTree = "<group>"; };
+		3ADCCBB619DDF974007E7708 /* RockFMWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RockFMWindowController.m; sourceTree = "<group>"; };
+		3ADCCBB719DDF974007E7708 /* RockFMWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RockFMWindowController.xib; sourceTree = "<group>"; };
+		3ADCCBC019DEDA0C007E7708 /* btn_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_play.png; sourceTree = "<group>"; };
+		3ADCCBC119DEDA0C007E7708 /* btn_stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_stop.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +89,12 @@
 				3A53A78719DDE4CE00380AE3 /* AppDelegate.h */,
 				3A53A78819DDE4CE00380AE3 /* AppDelegate.m */,
 				3A53A78A19DDE4CE00380AE3 /* Images.xcassets */,
-				3A53A78C19DDE4CE00380AE3 /* MainMenu.xib */,
 				3A53A78319DDE4CE00380AE3 /* Supporting Files */,
+				3ADCCBB519DDF974007E7708 /* RockFMWindowController.h */,
+				3ADCCBB619DDF974007E7708 /* RockFMWindowController.m */,
+				3ADCCBB719DDF974007E7708 /* RockFMWindowController.xib */,
+				3ADCCBBF19DEDA0C007E7708 /* Assets */,
+				3ADCCBAC19DDF814007E7708 /* Libs */,
 			);
 			path = RockFmPlayer;
 			sourceTree = "<group>";
@@ -109,6 +123,24 @@
 				3A53A79819DDE4CE00380AE3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3ADCCBAC19DDF814007E7708 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				3ADCCBAD19DDF814007E7708 /* AudioStreamer.h */,
+				3ADCCBAE19DDF814007E7708 /* AudioStreamer.m */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		3ADCCBBF19DEDA0C007E7708 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				3ADCCBC019DEDA0C007E7708 /* btn_play.png */,
+				3ADCCBC119DEDA0C007E7708 /* btn_stop.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,7 +224,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A53A78B19DDE4CE00380AE3 /* Images.xcassets in Resources */,
-				3A53A78E19DDE4CE00380AE3 /* MainMenu.xib in Resources */,
+				3ADCCBC319DEDA0C007E7708 /* btn_stop.png in Resources */,
+				3ADCCBC219DEDA0C007E7708 /* btn_play.png in Resources */,
+				3ADCCBB919DDF974007E7708 /* RockFMWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +245,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A53A78919DDE4CE00380AE3 /* AppDelegate.m in Sources */,
+				3ADCCBB819DDF974007E7708 /* RockFMWindowController.m in Sources */,
 				3A53A78619DDE4CE00380AE3 /* main.m in Sources */,
+				3ADCCBAF19DDF814007E7708 /* AudioStreamer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,17 +268,6 @@
 			targetProxy = 3A53A79419DDE4CE00380AE3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		3A53A78C19DDE4CE00380AE3 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3A53A78D19DDE4CE00380AE3 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3A53A79B19DDE4CE00380AE3 /* Debug */ = {
@@ -398,6 +423,7 @@
 				3A53A79F19DDE4CE00380AE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A53A7A019DDE4CE00380AE3 /* Build configuration list for PBXNativeTarget "RockFmPlayerTests" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +432,7 @@
 				3A53A7A219DDE4CE00380AE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
