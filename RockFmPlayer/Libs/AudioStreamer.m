@@ -1412,6 +1412,7 @@ cleanup:
 		{
 			err = AudioQueueEnqueueBuffer(audioQueue, fillBuf, 0, NULL);
 		}
+        AudioQueueSetParameter(audioQueue, kAudioQueueParam_Volume, _volume);
 		
 		if (err)
 		{
@@ -2005,6 +2006,12 @@ cleanup:
 	}
 }
 #endif
+
+//-(void)setVolume:(float)volume {
+//    @synchronized (
+//        
+//    )
+//}
 
 @end
 

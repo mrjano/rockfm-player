@@ -180,6 +180,7 @@ extern NSString * const ASStatusChangedNotification;
 @property (readonly) NSDictionary *httpHeaders;
 @property (copy,readwrite) NSString *fileExtension;
 @property (nonatomic) BOOL shouldDisplayAlertOnError; // to control whether the alert is displayed in failWithErrorCode
+@property (atomic) float volume;
 
 - (id)initWithURL:(NSURL *)aURL;
 - (void)start;
@@ -192,6 +193,7 @@ extern NSString * const ASStatusChangedNotification;
 - (BOOL)isAborted; // return YES if streaming halted due to error (AS_STOPPING + AS_STOPPING_ERROR)
 - (void)seekToTime:(double)newSeekTime;
 - (double)calculatedBitRate;
+//-(void)setVolume:(float)volume;
 
 @end
 

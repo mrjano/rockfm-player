@@ -14,14 +14,14 @@
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+            <rect key="contentRect" x="196" y="240" width="359" height="193"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
             <view key="contentView" id="se5-gp-TjO">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <rect key="frame" x="0.0" y="0.0" width="359" height="193"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Qw-BA-Afa">
-                        <rect key="frame" x="20" y="161" width="89" height="89"/>
+                        <rect key="frame" x="20" y="84" width="89" height="89"/>
                         <buttonCell key="cell" type="bevel" bezelStyle="circular" image="btn_play" imagePosition="above" alignment="left" imageScaling="proportionallyDown" id="dEi-U0-N9j">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="label"/>
@@ -30,15 +30,28 @@
                             <action selector="mediaPressed:" target="SEg-nM-g5K" id="AhJ-Fj-xhV"/>
                         </connections>
                     </button>
+                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FmO-Iu-ZS1">
+                        <rect key="frame" x="169" y="82" width="96" height="21"/>
+                        <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="HQF-A8-I4F"/>
+                        <connections>
+                            <action selector="sliderVolumeValueChanged:" target="SEg-nM-g5K" id="fFr-q6-nrX"/>
+                        </connections>
+                    </slider>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="baz-wT-Z5e" customClass="ScrollingTextView">
+                        <rect key="frame" x="136" y="122" width="163" height="46"/>
+                    </customView>
                 </subviews>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
+            <point key="canvasLocation" x="79.5" y="109.5"/>
         </window>
         <customObject id="SEg-nM-g5K" customClass="RockFMWindowController">
             <connections>
                 <outlet property="btnMedia" destination="9Qw-BA-Afa" id="fa5-kT-QvL"/>
+                <outlet property="sliderVolume" destination="FmO-Iu-ZS1" id="CQJ-qh-svT"/>
+                <outlet property="txtTitle" destination="baz-wT-Z5e" id="2Bd-fl-XBK"/>
             </connections>
         </customObject>
     </objects>

@@ -10,6 +10,9 @@
 #import "AudioStreamer.h"
 
 #define URL @"http://c21livecdn001.cires21.com/playerrockandgol.mp3"
+#define METADATA_URL @"http://player.rockfm.fm/rdsrock.php"
+#define DEFAULT_VOLUME 0.5
+#define TEXT_SPEED 0.05
 
 typedef enum
 {
@@ -21,6 +24,7 @@ typedef enum
 @interface RockFMWindowController () {
     AudioStreamer *streamer;
     MediaButtonState buttonStatus;
+    NSTimer *metadataTimer;
 }
 
 @end
@@ -33,6 +37,9 @@ typedef enum
     if (self) {
         buttonStatus = BUTTON_PLAY;
         [_btnMedia setEnabled:YES];
+        [_sliderVolume setDoubleValue:DEFAULT_VOLUME*100];
+        metadataTimer = [NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(getSongMetadata) userInfo:nil repeats:YES];
+        [metadataTimer fire];
     }
     return self;
 }
@@ -45,6 +52,7 @@ typedef enum
          selector:@selector(playbackStateChanged:)
          name:ASStatusChangedNotification
          object:streamer];
+        [streamer setVolume:DEFAULT_VOLUME];
     }
     [streamer start];
 }
@@ -83,12 +91,39 @@ typedef enum
 
 - (void)setButtonAsLoading:(BOOL)option {
     if(option) {
-        [_btnMedia setAlphaValue:0];
+        [_btnMedia setEnabled:NO];
     }
     else {
-        [_btnMedia setAlphaValue:1];
+        [_btnMedia setEnabled:YES];
     }
 }
+
+- (void)getSongMetadata {
+    NSURL *url = [NSURL URLWithString:METADATA_URL];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    [NSURLConnection sendAsynchronousRequest:urlRequest queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
+    {
+        if (error)
+        {
+            NSLog(@"Error,%@", [error localizedDescription]);
+        }
+        else
+        {
+            NSLog(@"%@", [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding]);
+            NSString* songName = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+            songName = [songName componentsSeparatedByString:@"@"][0];
+            songName = [songName stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+            songName = [[songName stringByReplacingOccurrencesOfString:@":" withString:@" -"] capitalizedString];
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                [_txtTitle setText:songName];
+                [_txtTitle setSpeed:TEXT_SPEED];
+            }];
+        }
+    }];
+}
+
+#pragma mark - IBAction
 
 - (IBAction)mediaPressed:(id)sender {
     if(buttonStatus == BUTTON_PLAY) {
@@ -96,6 +131,12 @@ typedef enum
     }
     if(buttonStatus == BUTTON_STOP) {
         [self stopStreamer];
+    }
+}
+- (IBAction)sliderVolumeValueChanged:(id)sender {
+    if(streamer != nil) {
+        NSSlider *slider = sender;
+        [streamer setVolume:slider.doubleValue/100.0];
     }
 }
 
