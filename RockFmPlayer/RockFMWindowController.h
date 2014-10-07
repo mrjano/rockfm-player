@@ -10,8 +10,10 @@
 #import "ScrollingTextView.h"
 
 @interface RockFMWindowController : NSWindowController
+@property (strong) IBOutlet NSWindow *playerWindow;
 @property (weak) IBOutlet NSButton *btnMedia;
 @property (weak) IBOutlet NSSlider *sliderVolume;
 @property (weak) IBOutlet ScrollingTextView *txtTitle;
-
+@property (strong) IBOutlet NSMenu *topBarMenu;
+@property (strong, nonatomic) NSStatusItem *statusBar;
 @end

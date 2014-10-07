@@ -4,18 +4,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6245"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="RockFMWindowController">
-            <connections>
-                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
-            </connections>
-        </customObject>
+        <customObject id="-2" userLabel="File's Owner" customClass="RockFMWindowController"/>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="359" height="193"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
             <view key="contentView" id="se5-gp-TjO">
                 <rect key="frame" x="0.0" y="0.0" width="359" height="193"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -50,10 +46,29 @@
         <customObject id="SEg-nM-g5K" customClass="RockFMWindowController">
             <connections>
                 <outlet property="btnMedia" destination="9Qw-BA-Afa" id="fa5-kT-QvL"/>
+                <outlet property="playerWindow" destination="F0z-JX-Cv5" id="B8Q-FK-rBp"/>
                 <outlet property="sliderVolume" destination="FmO-Iu-ZS1" id="CQJ-qh-svT"/>
+                <outlet property="topBarMenu" destination="x0G-pn-VgL" id="wuf-a8-elf"/>
                 <outlet property="txtTitle" destination="baz-wT-Z5e" id="2Bd-fl-XBK"/>
             </connections>
         </customObject>
+        <menu id="x0G-pn-VgL">
+            <items>
+                <menuItem title="Show Player" id="1vS-KN-z0T">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="showPressed:" target="SEg-nM-g5K" id="iiq-kp-PvK"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Quit" id="sNl-8M-fti">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quitPressed:" target="SEg-nM-g5K" id="CJc-ce-z3X"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="160" y="301.5"/>
+        </menu>
     </objects>
     <resources>
         <image name="btn_play" width="256" height="256"/>

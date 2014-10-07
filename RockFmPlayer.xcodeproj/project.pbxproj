@@ -12,6 +12,8 @@
 		3A53A78B19DDE4CE00380AE3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A53A78A19DDE4CE00380AE3 /* Images.xcassets */; };
 		3A53A79A19DDE4CE00380AE3 /* RockFmPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A53A79919DDE4CE00380AE3 /* RockFmPlayerTests.m */; };
 		3A89ED6A19E20B7C005F1C0F /* ScrollingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A89ED6919E20B7C005F1C0F /* ScrollingTextView.m */; };
+		3A89ED6C19E2145D005F1C0F /* status_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A89ED6B19E2145D005F1C0F /* status_icon.png */; };
+		3A89ED6E19E21508005F1C0F /* menubar_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A89ED6D19E21508005F1C0F /* menubar_icon.png */; };
 		3ADCCBAF19DDF814007E7708 /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADCCBAE19DDF814007E7708 /* AudioStreamer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3ADCCBB819DDF974007E7708 /* RockFMWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADCCBB619DDF974007E7708 /* RockFMWindowController.m */; };
 		3ADCCBB919DDF974007E7708 /* RockFMWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ADCCBB719DDF974007E7708 /* RockFMWindowController.xib */; };
@@ -41,6 +43,8 @@
 		3A53A79919DDE4CE00380AE3 /* RockFmPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RockFmPlayerTests.m; sourceTree = "<group>"; };
 		3A89ED6819E20B7C005F1C0F /* ScrollingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollingTextView.h; sourceTree = "<group>"; };
 		3A89ED6919E20B7C005F1C0F /* ScrollingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollingTextView.m; sourceTree = "<group>"; };
+		3A89ED6B19E2145D005F1C0F /* status_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status_icon.png; sourceTree = "<group>"; };
+		3A89ED6D19E21508005F1C0F /* menubar_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menubar_icon.png; sourceTree = "<group>"; };
 		3ADCCBAD19DDF814007E7708 /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioStreamer.h; sourceTree = "<group>"; };
 		3ADCCBAE19DDF814007E7708 /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioStreamer.m; sourceTree = "<group>"; };
 		3ADCCBB519DDF974007E7708 /* RockFMWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RockFMWindowController.h; sourceTree = "<group>"; };
@@ -142,6 +146,8 @@
 		3ADCCBBF19DEDA0C007E7708 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				3A89ED6D19E21508005F1C0F /* menubar_icon.png */,
+				3A89ED6B19E2145D005F1C0F /* status_icon.png */,
 				3ADCCBC019DEDA0C007E7708 /* btn_play.png */,
 				3ADCCBC119DEDA0C007E7708 /* btn_stop.png */,
 			);
@@ -229,8 +235,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A53A78B19DDE4CE00380AE3 /* Images.xcassets in Resources */,
+				3A89ED6E19E21508005F1C0F /* menubar_icon.png in Resources */,
 				3ADCCBC319DEDA0C007E7708 /* btn_stop.png in Resources */,
 				3ADCCBC219DEDA0C007E7708 /* btn_play.png in Resources */,
+				3A89ED6C19E2145D005F1C0F /* status_icon.png in Resources */,
 				3ADCCBB919DDF974007E7708 /* RockFMWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

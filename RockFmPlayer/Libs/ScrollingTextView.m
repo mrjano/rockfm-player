@@ -44,9 +44,10 @@
     
     if (point.x < 0) {
         NSPoint otherPoint = point;
-        otherPoint.x += dirtyRect.size.width;
+        otherPoint.x += stringWidth + kSpacing;
         [text drawAtPoint:otherPoint withAttributes:nil];
     }
+    NSLog(@"%f",point.x);
 }
 
 @end

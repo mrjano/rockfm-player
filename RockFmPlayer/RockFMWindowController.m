@@ -36,12 +36,25 @@ typedef enum
     self = [super init];
     if (self) {
         buttonStatus = BUTTON_PLAY;
-        [_btnMedia setEnabled:YES];
-        [_sliderVolume setDoubleValue:DEFAULT_VOLUME*100];
         metadataTimer = [NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(getSongMetadata) userInfo:nil repeats:YES];
         [metadataTimer fire];
     }
     return self;
+}
+
+- (void) awakeFromNib {
+    self.statusBar = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    
+    //self.statusBar.title = @"G";
+    
+    // you can also set an image
+    self.statusBar.image = [NSImage imageNamed:@"menubar_icon"];
+    
+    _statusBar.menu = _topBarMenu;
+    self.statusBar.highlightMode = YES;
+    
+    [_btnMedia setEnabled:YES];
+    [_sliderVolume setDoubleValue:DEFAULT_VOLUME*100];
 }
 
 -(void)startStreamer {
@@ -139,7 +152,14 @@ typedef enum
         [streamer setVolume:slider.doubleValue/100.0];
     }
 }
+- (IBAction)showPressed:(id)sender {
+    [NSApp activateIgnoringOtherApps:YES];
+    [_playerWindow makeKeyAndOrderFront:nil];
+}
 
+- (IBAction)quitPressed:(id)sender {
+    [NSApp terminate:self];
+}
 
 
 @end

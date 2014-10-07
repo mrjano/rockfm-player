@@ -1,4 +1,7 @@
 #import <Cocoa/Cocoa.h>
+
+#define kSpacing 20
+
 @interface ScrollingTextView : NSView {
     NSTimer * scroller;
     NSPoint point;
