@@ -23,7 +23,10 @@
         [scroller invalidate];
         scroller = nil;
         if (speed > 0 && text != nil) {
+            NSRunLoop *runloop = [NSRunLoop currentRunLoop];
             scroller = [NSTimer scheduledTimerWithTimeInterval:speed target:self selector:@selector(moveText:) userInfo:nil repeats:YES];
+            [runloop addTimer:scroller forMode:NSRunLoopCommonModes];
+            [runloop addTimer:scroller forMode: NSEventTrackingRunLoopMode];
         }
     }
 }
