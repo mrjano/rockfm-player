@@ -71,44 +71,53 @@ typedef enum
 }
 
 -(void)pauseStreamer {
-    [streamer pause];
-    [[NSNotificationCenter defaultCenter]
-     removeObserver:self
-     name:ASStatusChangedNotification
-     object:streamer];
-    streamer = nil;
-    
+    [streamer stop];
+//    [[NSNotificationCenter defaultCenter]
+//     removeObserver:self
+//     name:ASStatusChangedNotification
+//     object:streamer];
+//    streamer = nil;
+//    
 }
 
 - (void)playbackStateChanged:(NSNotification *)aNotification
 {
     if ([streamer isWaiting] && buttonStatus != BUTTON_LOADING)
     {
-        [self setButtonAsLoading:YES];
-        buttonStatus = BUTTON_LOADING;
+        [self setButtonState:BUTTON_LOADING];
     }
     else if ([streamer isPlaying] && buttonStatus != BUTTON_PAUSE)
     {
-        [_btnMedia setImage:[NSImage imageNamed:@"btn_stop"]];
-        [self setButtonAsLoading:NO];
-        buttonStatus = BUTTON_PAUSE;
+        [self setButtonState:BUTTON_PAUSE];
+    }
+    else if ([streamer isPaused] && buttonStatus != BUTTON_PLAY)
+    {
+        [self setButtonState:BUTTON_PLAY];
     }
     else if ([streamer isIdle] && buttonStatus != BUTTON_PLAY)
     {
-        [self pauseStreamer];
-        [_btnMedia setImage:[NSImage imageNamed:@"btn_play"]];
-        [self setButtonAsLoading:NO];
-        buttonStatus = BUTTON_PLAY;
+        [self setButtonState:BUTTON_PLAY];
     }
 }
 
-- (void)setButtonAsLoading:(BOOL)option {
-    if(option) {
+- (void)setButtonState:(MediaButtonState)state {
+    if(buttonStatus == state) {
+        return;
+    }
+    
+    if(state == BUTTON_PLAY) {
+        [_btnMedia setEnabled:YES];
+        [_btnMedia setImage:[NSImage imageNamed:@"btn_play"]];
+    }
+    if(state == BUTTON_PAUSE) {
+        [_btnMedia setEnabled:YES];
+        [_btnMedia setImage:[NSImage imageNamed:@"btn_stop"]];
+        
+    }
+    if(state == BUTTON_LOADING) {
         [_btnMedia setEnabled:NO];
     }
-    else {
-        [_btnMedia setEnabled:YES];
-    }
+    buttonStatus = state;
 }
 
 - (void)getSongMetadata {
@@ -142,9 +151,11 @@ typedef enum
 
 - (IBAction)mediaPressed:(id)sender {
     if(buttonStatus == BUTTON_PLAY) {
+        [self setButtonState:BUTTON_LOADING];
         [self startStreamer];
     }
     if(buttonStatus == BUTTON_PAUSE) {
+        [self setButtonState:BUTTON_PLAY];
         [self pauseStreamer];
     }
 }

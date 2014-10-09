@@ -193,7 +193,6 @@ extern NSString * const ASStatusChangedNotification;
 - (BOOL)isAborted; // return YES if streaming halted due to error (AS_STOPPING + AS_STOPPING_ERROR)
 - (void)seekToTime:(double)newSeekTime;
 - (double)calculatedBitRate;
-//-(void)setVolume:(float)volume;
 
 @end
 
