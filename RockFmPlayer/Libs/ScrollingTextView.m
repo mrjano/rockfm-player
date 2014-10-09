@@ -50,7 +50,6 @@
         otherPoint.x += stringWidth + kSpacing;
         [text drawAtPoint:otherPoint withAttributes:nil];
     }
-    NSLog(@"%f",point.x);
 }
 
 @end

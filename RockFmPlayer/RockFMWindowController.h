@@ -11,9 +11,23 @@
 
 @interface RockFMWindowController : NSWindowController
 @property (strong) IBOutlet NSWindow *playerWindow;
+
 @property (weak) IBOutlet NSButton *btnMedia;
 @property (weak) IBOutlet NSSlider *sliderVolume;
 @property (weak) IBOutlet ScrollingTextView *txtTitle;
 @property (strong) IBOutlet NSMenu *topBarMenu;
 @property (strong, nonatomic) NSStatusItem *statusBar;
+@property (weak) IBOutlet NSTextField *txtMenuLT;
+
+
+@property (strong) IBOutlet NSTextField *songList;
+
+
+- (IBAction)btnMute:(id)sender;
+
+- (IBAction)addSong:(id)sender;
+
+
+
+
 @end

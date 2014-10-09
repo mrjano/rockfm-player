@@ -18,7 +18,7 @@ typedef enum
 {
     BUTTON_LOADING = 0,
     BUTTON_PLAY,
-    BUTTON_STOP
+    BUTTON_PAUSE
 } MediaButtonState;
 
 @interface RockFMWindowController () {
@@ -70,8 +70,8 @@ typedef enum
     [streamer start];
 }
 
--(void)stopStreamer {
-    [streamer stop];
+-(void)pauseStreamer {
+    [streamer pause];
     [[NSNotificationCenter defaultCenter]
      removeObserver:self
      name:ASStatusChangedNotification
@@ -87,15 +87,15 @@ typedef enum
         [self setButtonAsLoading:YES];
         buttonStatus = BUTTON_LOADING;
     }
-    else if ([streamer isPlaying] && buttonStatus != BUTTON_STOP)
+    else if ([streamer isPlaying] && buttonStatus != BUTTON_PAUSE)
     {
         [_btnMedia setImage:[NSImage imageNamed:@"btn_stop"]];
         [self setButtonAsLoading:NO];
-        buttonStatus = BUTTON_STOP;
+        buttonStatus = BUTTON_PAUSE;
     }
     else if ([streamer isIdle] && buttonStatus != BUTTON_PLAY)
     {
-        [self stopStreamer];
+        [self pauseStreamer];
         [_btnMedia setImage:[NSImage imageNamed:@"btn_play"]];
         [self setButtonAsLoading:NO];
         buttonStatus = BUTTON_PLAY;
@@ -131,6 +131,8 @@ typedef enum
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                 [_txtTitle setText:songName];
                 [_txtTitle setSpeed:TEXT_SPEED];
+                [_txtMenuLT setStringValue:songName];
+                
             }];
         }
     }];
@@ -142,8 +144,8 @@ typedef enum
     if(buttonStatus == BUTTON_PLAY) {
         [self startStreamer];
     }
-    if(buttonStatus == BUTTON_STOP) {
-        [self stopStreamer];
+    if(buttonStatus == BUTTON_PAUSE) {
+        [self pauseStreamer];
     }
 }
 - (IBAction)sliderVolumeValueChanged:(id)sender {
@@ -162,4 +164,44 @@ typedef enum
 }
 
 
+
+
+- (IBAction)rockFM:(id)sender {
+
+}
+- (IBAction)KissFM:(id)sender {
+
+}
+
+
+- (IBAction)btnMute:(id)sender {
+
+    NSButton *mute=sender;
+    [streamer setVolume:mute.doubleValue/DEFAULT_VOLUME];
+
+}
+- (IBAction)addSong:(id)sender {
+    NSURL *url = [NSURL URLWithString:METADATA_URL];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    [NSURLConnection sendAsynchronousRequest:urlRequest queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
+     {
+         if (error)
+         {
+             NSLog(@"Error,%@", [error localizedDescription]);
+         }
+         else
+         {
+             NSLog(@"%@", [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding]);
+             NSString *songName = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+             songName = [songName componentsSeparatedByString:@"@"][0];
+             songName = [songName stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+             songName = [[songName stringByReplacingOccurrencesOfString:@":" withString:@" -"]
+                         capitalizedString];
+             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                 [_songList setStringValue:songName];
+             }];
+         }
+     }];
+}
 @end
