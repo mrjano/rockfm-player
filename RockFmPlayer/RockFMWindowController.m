@@ -25,6 +25,7 @@ typedef enum
     AudioStreamer *streamer;
     MediaButtonState buttonStatus;
     NSTimer *metadataTimer;
+    float savedVolume;
 }
 
 @end
@@ -186,9 +187,18 @@ typedef enum
 
 
 - (IBAction)btnMute:(id)sender {
-
-    NSButton *mute=sender;
-    [streamer setVolume:mute.doubleValue/DEFAULT_VOLUME];
+    float currentVolume = _sliderVolume.floatValue;
+    if(currentVolume > 0) {
+        savedVolume = currentVolume;
+        [streamer setVolume:0];
+        [_sliderVolume setFloatValue:0];
+    }
+    else {
+        [streamer setVolume:savedVolume/100.0];
+        [_sliderVolume setFloatValue:savedVolume];
+    }
+    
+    
 
 }
 - (IBAction)addSong:(id)sender {
