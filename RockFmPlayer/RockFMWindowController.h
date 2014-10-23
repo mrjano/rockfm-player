@@ -13,11 +13,14 @@
 @property (strong) IBOutlet NSWindow *playerWindow;
 
 @property (weak) IBOutlet NSButton *btnMedia;
+@property (weak) IBOutlet NSButton *btnMediaLT;
 @property (weak) IBOutlet NSSlider *sliderVolume;
+@property (weak) IBOutlet NSSlider *sliderVolumeLT;
 @property (weak) IBOutlet ScrollingTextView *txtTitle;
+@property (weak) IBOutlet ScrollingTextView *txtTitleLT;
 @property (strong) IBOutlet NSMenu *topBarMenu;
 @property (strong, nonatomic) NSStatusItem *statusBar;
-@property (weak) IBOutlet NSTextField *txtMenuLT;
+
 
 
 @property (strong) IBOutlet NSTextField *songList;

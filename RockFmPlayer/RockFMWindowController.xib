@@ -76,19 +76,20 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
-            <point key="canvasLocation" x="161.5" y="129"/>
+            <point key="canvasLocation" x="201.5" y="119"/>
         </window>
         <customObject id="SEg-nM-g5K" customClass="RockFMWindowController">
             <connections>
                 <outlet property="btnMedia" destination="9Qw-BA-Afa" id="fa5-kT-QvL"/>
+                <outlet property="btnMediaLT" destination="x70-Ch-Guf" id="oLj-JE-hA0"/>
                 <outlet property="playerWindow" destination="F0z-JX-Cv5" id="G6N-B9-ocQ"/>
                 <outlet property="sliderVolume" destination="FmO-Iu-ZS1" id="CQJ-qh-svT"/>
+                <outlet property="sliderVolumeLT" destination="VFF-BZ-ho3" id="izW-gC-WZ9"/>
                 <outlet property="songList" destination="yNk-z8-IYg" id="FeF-hx-j4x"/>
                 <outlet property="songName" destination="se5-gp-TjO" id="oTM-bi-SmT"/>
                 <outlet property="topBarMenu" destination="x0G-pn-VgL" id="wuf-a8-elf"/>
-                <outlet property="txtMenu" destination="qG2-LU-Fjy" id="mXc-5S-HbW"/>
-                <outlet property="txtMenuLT" destination="qG2-LU-Fjy" id="5ib-Wc-DmJ"/>
                 <outlet property="txtTitle" destination="baz-wT-Z5e" id="2Bd-fl-XBK"/>
+                <outlet property="txtTitleLT" destination="0Cd-Sx-deD" id="HPM-db-LJA"/>
             </connections>
         </customObject>
         <menu id="x0G-pn-VgL">
@@ -97,7 +98,7 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="showPressed:" target="SEg-nM-g5K" id="bgC-iS-bYr"/>
-                        <outlet property="view" destination="vb2-k8-uvu" id="dh1-IC-sUk"/>
+                        <outlet property="view" destination="vb2-k8-uvu" id="gua-nq-aWn"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="r9e-tl-hYJ"/>
@@ -133,19 +134,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="383" height="58"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qG2-LU-Fjy">
-                        <rect key="frame" x="18" y="35" width="347" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="label" id="xu9-oO-cqb">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Cd-Sx-deD" customClass="ScrollingTextView">
+                        <rect key="frame" x="20" y="32" width="343" height="20"/>
+                    </customView>
                     <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VFF-BZ-ho3">
                         <rect key="frame" x="64" y="6" width="204" height="21"/>
                         <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="A3q-Ht-G3t"/>
                         <connections>
-                            <action selector="sliderVolumeValueChanged:" target="SEg-nM-g5K" id="R3J-OI-rP8"/>
+                            <action selector="sliderVolumeValueChanged:" target="SEg-nM-g5K" id="IWO-qc-aCm"/>
                         </connections>
                     </slider>
                     <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x70-Ch-Guf">

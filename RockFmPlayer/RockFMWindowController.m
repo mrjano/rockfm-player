@@ -55,7 +55,9 @@ typedef enum
     self.statusBar.highlightMode = YES;
     
     [_btnMedia setEnabled:YES];
+    [_btnMediaLT setEnabled:YES];
     [_sliderVolume setDoubleValue:DEFAULT_VOLUME*100];
+    [_sliderVolumeLT setDoubleValue:DEFAULT_VOLUME*100];
 }
 
 -(void)startStreamer {
@@ -109,14 +111,19 @@ typedef enum
     if(state == BUTTON_PLAY) {
         [_btnMedia setEnabled:YES];
         [_btnMedia setImage:[NSImage imageNamed:@"btn_play"]];
+        [_btnMediaLT setEnabled:YES];
+        [_btnMediaLT setImage:[NSImage imageNamed:@"btn_play"]];
     }
     if(state == BUTTON_PAUSE) {
         [_btnMedia setEnabled:YES];
         [_btnMedia setImage:[NSImage imageNamed:@"btn_stop"]];
+        [_btnMediaLT setEnabled:YES];
+        [_btnMediaLT setImage:[NSImage imageNamed:@"btn_stop"]];
         
     }
     if(state == BUTTON_LOADING) {
         [_btnMedia setEnabled:NO];
+        [_btnMediaLT setEnabled:NO];
     }
     buttonStatus = state;
 }
@@ -141,7 +148,8 @@ typedef enum
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                 [_txtTitle setText:songName];
                 [_txtTitle setSpeed:TEXT_SPEED];
-                [_txtMenuLT setStringValue:songName];
+                [_txtTitleLT setText:songName];
+                [_txtTitleLT setSpeed:TEXT_SPEED];
                 
             }];
         }
@@ -161,10 +169,12 @@ typedef enum
     }
 }
 - (IBAction)sliderVolumeValueChanged:(id)sender {
+    NSSlider *slider = sender;
     if(streamer != nil) {
-        NSSlider *slider = sender;
         [streamer setVolume:slider.doubleValue/100.0];
     }
+    [_sliderVolume setFloatValue:slider.floatValue];
+    [_sliderVolumeLT setFloatValue:slider.floatValue];
 }
 - (IBAction)showPressed:(id)sender {
     [NSApp activateIgnoringOtherApps:YES];
@@ -192,10 +202,12 @@ typedef enum
         savedVolume = currentVolume;
         [streamer setVolume:0];
         [_sliderVolume setFloatValue:0];
+        [_sliderVolumeLT setFloatValue:0];
     }
     else {
         [streamer setVolume:savedVolume/100.0];
         [_sliderVolume setFloatValue:savedVolume];
+        [_sliderVolumeLT setFloatValue:savedVolume];
     }
     
     
